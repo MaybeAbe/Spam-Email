@@ -81,5 +81,8 @@ print(f"RegexpTokenizer— avg tokens per email: {avg:.1f}")
 X = df['text']
 y = df['spam']
 
-# 80/20 split of train 
+# 80/20 split of train for 5 CV splices
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=True, stratify=y, random_state=42)
+
+#Goal is to use TF-IDf to turn emails into quantifiable numbers
+#Use Naive Bayes and LogReg for classification TBA
